@@ -5,3 +5,4 @@ function navLinksToggle () {
     navLinks.classList.toggle("header-nav-links-active");
 }
 navBurger.addEventListener("click", navLinksToggle);
+

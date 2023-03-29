@@ -6,6 +6,9 @@
     --main-font-size: 24px;
     --secondary-font-size: 14px;
 }
+html{
+    scroll-behavior: smooth;
+}
 .container{
     max-width: 1320px;
     width: 90%;
@@ -240,7 +243,28 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     color: var(--light-blue);
     rotate: 360deg;
 }
-
+/*slider*/
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
+.model-card-padding-border{
+    padding: 80px 0px;
+    border-bottom: 1px solid var(--light-blue);
+}
+.slider-for-a-class{
+    margin-top: 100px;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 450px
+}
+.all-cars-slider-section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    gap: 100px;
+}
 
 
 
