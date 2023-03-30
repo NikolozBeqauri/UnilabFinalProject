@@ -326,10 +326,70 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     font-size: var(--main-font-size);
     color: var(--light-blue);
 }
-
-
-
-
+/*guarantee*/
+.guarantee-whole-wrapper h1{
+    color: var(--light-blue);
+    font-size: var(--title-font-size);
+}
+.guarantee-whole-wrapper div img{
+    width: 80%;
+    border-radius: 10px;
+}
+.guarantee-whole-wrapper div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    line-height: 30px;
+}
+.guarantee-whole-wrapper{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+/*contact*/
+.contact-section-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.contact-section-wrapper div h1{
+    font-size: var(--title-font-size);
+    color: var(--light-blue);
+}
+.contact-section-wrapper div {
+    text-align: ce;
+}
+.contact-cards-wrapper{
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+}
+.contact-card-wrapper{
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-card-wrapper a{
+   text-decoration: none;
+   color: var(--light-blue);
+}
+.person-name{
+    transition: 1s;}
+.contact-card-wrapper img{
+    width: 100%;
+    transition: 1s;
+ }
+ .contact-card-wrapper:hover .person-name,
+ .contact-card-wrapper:hover .person-img{
+    scale: 1.1;
+    color:  #b20000;
+ }
 
 
 
@@ -440,11 +500,8 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     /*models end*/
     .services-iframe{
         height: 250px;
+    }wqe-wrapper div img{
+        height: 130px;
     }
-    .services-nav-section nav ul{
-       flex-direction: column;
-       align-items: center;
-       gap: 20px; 
-    }
-    /*services end*/
+    /*guarantee*/
 }
