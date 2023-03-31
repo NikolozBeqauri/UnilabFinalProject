@@ -351,6 +351,8 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
     gap: 40px;
 }
 .contact-section-wrapper div h1{
@@ -390,14 +392,92 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     scale: 1.1;
     color:  #b20000;
  }
-
-
-
-
-
-
-
-
+/*check*/
+.check-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+.check-wrapper div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.check-wrapper p{
+    line-height: 20px;
+}
+.check-wrapper ul{
+   display: grid;
+   grid-gap: 20px;
+}
+.check-wrapper h1{
+    font-size: var(--title-font-size);
+    color: var(--light-blue);
+    transition: 1s;
+}
+.check-wrapper h2{
+    font-size: var(--main-font-size);
+    color: var(--light-blue);
+    transition: 1s;
+}
+.check-wrapper h1:hover,
+.check-wrapper h2:hover{
+    color:#b20000;
+}
+/*prices*/
+.whole-price-page-wrapper{
+    color: black;
+    background-color: white;
+    padding: 20px 0px;
+}
+.whole-price-page-wrapper h1{
+    font-size: var(--title-font-size);
+    color: var(--light-blue);
+}
+.price-cards-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.price-one-class-wrappler{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 30px;
+    border-bottom: 2px solid var(--light-blue);
+}
+.price-page-car-image-name{
+    flex-direction: column;
+    font-size: var(--main-font-size);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.price-page-car-image-name img{
+    border-radius: 10px;
+}
+.price-div-gray-background{
+    padding: 10px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: 1s;
+}
+.price-div-gray-background:hover{
+    scale: 1.1;
+    background-color: var(--light-blue);
+}
+.price-div-white-background:hover{
+    scale: 1.1;
+    background-color: var(--light-blue);
+}
+.price-div-white-background{
+    padding: 10px; 
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: 1s;
+}
 @media (max-width: 1320px) {
     .main-page-cards{
         grid-template-columns: repeat(2, 1fr);
@@ -452,6 +532,9 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
         height: 300px;
     }
     /*models end*/
+    .price-one-class-wrappler{
+        width: 80%;
+    }
 }
 @media (max-width: 600px) {
     .main-page-cards{
@@ -498,10 +581,20 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
         height: 180px;
     }
     /*models end*/
+    .services-nav-section ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    /*service*/
     .services-iframe{
         height: 250px;
     }wqe-wrapper div img{
         height: 130px;
     }
     /*guarantee*/
+     .price-one-class-wrappler{
+        width: 95%;
+        font-size: 14px;
+    }
 }
