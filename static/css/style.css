@@ -31,12 +31,11 @@ html{
     text-align: center;
 }
 body{
+    font-family: 'Alkatra', cursive;
+    font-family: 'Delicious Handrawn', cursive;
     background: linear-gradient(90deg, rgba(0,0,0,1) 36%, rgba(0,86,152,1) 81%, rgba(0,211,255,1) 100%);
     color: white;
     margin-bottom: 40px;
-    font-family: 'Delicious Handrawn', cursive;
-    font-family: 'Roboto', sans-serif;
-    
 }
 body img{
     border-radius: 10px;
@@ -94,6 +93,7 @@ header nav ul .header-nav-icons img{
 }
 .header-nav-links a{
     transition: 0.5s;
+    
 }
 .header-nav-links a:hover{
     color: var(--light-blue);
@@ -104,13 +104,77 @@ main{
 }
 .scroll-up{
     position: fixed;
-    left: 2%;
+    left: 1%;
     bottom: 5%;
     z-index: 2;
+    transition: 0.5s;
+}
+/*scroll*/
+.scroll-up:hover{
+    scale: 1.3;
 }
 .scroll-up img{
     width: 50px;
     height: 50px;
+}
+/*modal*/
+.modal-open-button{
+    position: fixed;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    right: 1%;
+    bottom: 5%;
+    z-index: 2;
+    transition: 0.5s;
+    background: rgb(82,82,82);
+    background: linear-gradient(90deg, rgba(82,82,82,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.modal-open-button:hover{
+    scale: 1.2;
+}
+.modal-wrapper{
+    display: none;
+}
+.modal-active{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    background-color: rgba(187, 187, 187, 0.6);
+    z-index: 4;
+}
+.modal-window{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: linear-gradient(to left, #F0F2F0, #324ab3);    
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    width: 80%;
+    position: relative;
+}
+.modal-close-button{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    cursor: pointer;
+}
+.modal-close-button img{
+    width: 30px;
+    height: 30px;
+}
+.modal-window div:not(:nth-child(1)){
+    display: flex;
+    justify-content: center;
+    color: var(--main-color);
+    width: 100%;
+    text-align: center;
+}
+.modal-header{
+    font-size: var(--main-font-size);
 }
 /*footer*/
 footer{
@@ -156,8 +220,8 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     margin-top: 20px;
 }
 .footer-icon-div img{
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 }
 .footer-card-wrapper{
     display: flex;
@@ -433,8 +497,10 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
 .check-wrapper div{
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 30px;
+}
+.check-main-img-title{
+    align-items: center;
 }
 .check-wrapper img{
     width: 80%;
@@ -459,6 +525,31 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
 .check-wrapper h1:hover,
 .check-wrapper h2:hover{
     color:#b20000;
+}
+.order-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.order-button a{
+    transition: 1s;
+    border-radius: 10px;
+}
+.order-button button{
+    font-size: var(--main-font-size);
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background: var(--light-blue);
+    box-shadow: 0 0 25px var(--light-blue);
+}
+.order-button a:hover{
+    border-radius: 10px;
+    box-shadow: 0 0 25px var(--light-blue),
+                0 0 50px var(--light-blue),                
+                0 0 100px var(--light-blue);
 }
 /*prices*/
 .whole-price-page-wrapper{
@@ -495,20 +586,67 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     border-radius: 10px;
     justify-content: space-between;
     transition: 1s;
+    box-shadow: 0 0 25px var(--light-blue);
 }
 .price-div-gray-background:hover{
     scale: 1.1;
     background-color: var(--light-blue);
+    box-shadow: 0 0 25px var(--light-blue),
+                0 0 50px var(--light-blue),                
+                0 0 100px var(--light-blue);
 }
 .price-div-white-background:hover{
     scale: 1.1;
     background-color: var(--light-blue);
+    box-shadow: 0 0 25px var(--light-blue),
+                0 0 50px var(--light-blue),                
+                0 0 100px var(--light-blue);
 }
 .price-div-white-background{
     padding: 10px; 
     border-radius: 10px;
     justify-content: space-between;
     transition: 1s;
+    box-shadow: 0 0 25px var(--light-blue);
+}
+/*order*/
+.order-section{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.order-section form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    gap: 40px;
+}
+.order-section form div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.order-section form div input{
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+    box-shadow: 0 0 25px var(--light-blue);
+}
+.order-submit{
+    width: 40%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.order-section input:hover{
+    scale: 1.1;
+    border-radius: 10px;
+    box-shadow: 0 0 25px var(--light-blue),
+                0 0 50px var(--light-blue),                
+                0 0 100px var(--light-blue);
 }
 @media (max-width: 1320px) {
     .main-page-cards{
@@ -535,7 +673,6 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     }
         /*models end*/
 }
-
 @media (max-width: 1024px) {
     .header-nav-links{
         display: none;
@@ -578,6 +715,10 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     }
     .model-card a img{
     height: 180px;
+    }
+    /*order*/
+    .order-section form{
+        width: 85%;
     }
 }
 @media (max-width: 600px) {
@@ -625,6 +766,25 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
         height: 450px;
     }
     /*service end*/
+    .modal-window{
+        width: 90%;
+        padding: 20px;
+    }
+    .modal-header{
+        font-size: 16px;
+    }
+    .modal-body{
+        font-size: 13px;
+    }
+    .modal-header img{
+        width: 50px;
+        height: 50px;
+    }
+    /*oeder*/
+    .order-section form{
+        width: 100%;
+        gap: 20px;
+    }
 }
 @media (max-width: 480px) {
     .main-page-card-wrapper{
@@ -652,6 +812,14 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     }
      .model-card a img{
     height: 190px;
+    }
+    /*order*/
+    .order-section form{
+        justify-content: center;
+    }
+    .order-submit{
+        width: inherit;
+        margin-top: 30px;
     }
 }
 @keyframes bounce{
