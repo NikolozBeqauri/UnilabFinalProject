@@ -526,6 +526,7 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
 .check-wrapper h2:hover{
     color:#b20000;
 }
+/*order*/
 .order-button{
     display: flex;
     justify-content: center;
@@ -550,6 +551,10 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     box-shadow: 0 0 25px var(--light-blue),
                 0 0 50px var(--light-blue),                
                 0 0 100px var(--light-blue);
+}
+form .order-div-spans{
+    display: flex;
+    flex-direction: column;
 }
 /*prices*/
 .whole-price-page-wrapper{
@@ -623,14 +628,15 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     width: 60%;
     gap: 40px;
 }
-.order-section form div{
+.order-section form .order-input-div{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 .order-section form div input{
-    padding: 10px 15px;
+    padding: 10px;
     border-radius: 10px;
+    font-size: 16px;
     cursor: pointer;
     border: none;
     transition: 0.5s;
@@ -641,12 +647,24 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     margin-left: 50%;
     transform: translateX(-50%);
 }
+.order-submit input{
+    display: flex; 
+    justify-content: center;
+    padding: 10px;
+}
 .order-section input:hover{
     scale: 1.1;
     border-radius: 10px;
     box-shadow: 0 0 25px var(--light-blue),
                 0 0 50px var(--light-blue),                
                 0 0 100px var(--light-blue);
+}
+.order-input-spans{
+    display: flex;
+    justify-content: space-between;
+}
+.order-submit input{
+    
 }
 @media (max-width: 1320px) {
     .main-page-cards{
@@ -704,6 +722,9 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     .check-wrapper img{
         width: 100%;
     }
+    .order-section form{
+        width: 85%;
+    }
 }
 @media (max-width: 870px) {
     .swiper-slide img{
@@ -718,7 +739,7 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     }
     /*order*/
     .order-section form{
-        width: 85%;
+        width: 100%;
     }
 }
 @media (max-width: 600px) {
@@ -782,8 +803,7 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     }
     /*oeder*/
     .order-section form{
-        width: 100%;
-        gap: 20px;
+        justify-content: center;
     }
 }
 @media (max-width: 480px) {
@@ -813,13 +833,8 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
      .model-card a img{
     height: 190px;
     }
-    /*order*/
-    .order-section form{
-        justify-content: center;
-    }
-    .order-submit{
-        width: inherit;
-        margin-top: 30px;
+    header nav ul div {
+        gap: 10px;
     }
 }
 @keyframes bounce{

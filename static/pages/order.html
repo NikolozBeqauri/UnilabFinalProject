@@ -55,19 +55,31 @@
     
         <section class="order-section container">
             <form>
-                <div>
+                <div class="order-input-div">
                     <label for="for-Fname" >First Name</label>
-                    <input id="for-Fname" required type="text">
+                    <input id="for-Fname" required maxlength="30" minlength="3" type="text">
+                    <div class="order-input-spans">
+                        <span>limit:</span>
+                        <span class="counter">30</span>
+                    </div>
                 </div>
 
-                <div>
+                <div class="order-input-div">
                     <label for="for-Lname">Last Name</label>
-                    <input id="for-Lname" required type="text">
+                    <input id="for-Lname" required maxlength="30" minlength="3" type="text">
+                    <div class="order-input-spans">
+                        <span>limit:</span>
+                        <span class="counter">30</span>
+                    </div>
                 </div>
 
-                <div>
+                <div class="order-input-div"> 
                     <label for="for-car">Choose Car</label>
-                    <input id="for-car" required list="cars">
+                    <input id="for-car" required maxlength="30" minlength="3" list="cars">
+                    <div class="order-input-spans">
+                        <span>limit:</span>
+                        <span class="counter">30</span>
+                    </div>
                 </div>
                 <datalist id="cars">
                         <option value="A-Class">
@@ -77,20 +89,31 @@
                         <option value="G-Class">
                         <option value="S-Class">
                 </datalist>
-                <div>
+                <div class="order-input-div">
                     <label for="for-phone">Phone</label>
-                    <input id="for-phone" required type="tel">
+                    <input id="for-phone" required maxlength="30" minlength="3" type="tel">
+                    <div class="order-input-spans">
+                        <span>limit:</span>
+                        <span class="counter">30</span>
+                    </div>
                 </div>
-                <div>
+                <div class="order-input-div">
                     <label for="for-email">Email</label>
-                    <input id="for-email" required type="email">
+                    <input id="for-email" required maxlength="30" minlength="3" type="email">
+                    <div class="order-input-spans">
+                        <span>limit:</span>
+                        <span class="counter">30</span>
+                    </div>
                 </div>
 
-                <div>
+                <div class="order-input-div">
                     <label for="for-Remail">Repeat Email</label>
-                    <input id="for-Remail" required type="email">
+                    <input id="for-Remail" required maxlength="30" minlength="3" type="email">  <div class="order-input-spans">
+                        <span>limit:</span>
+                        <span class="counter">30</span>
+                    </div>
                 </div>
-                <div class="order-submit">
+                <div class="order-submit order-input-div">
                     <input required type="submit">
                 </div>
             </form>
