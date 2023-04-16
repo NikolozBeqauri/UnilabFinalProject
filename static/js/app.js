@@ -5,6 +5,7 @@ const modalWrapper = document.querySelector(".modal-wrapper");
 const openButton = document.querySelector(".modal-open-button");
 const closeButton = document.querySelector(".modal-close-button");
 
+const Fname = document.getElementById("for-Fname");
 
 /*burger*/
 function navLinksToggle () {
@@ -25,3 +26,11 @@ window.addEventListener('click', (e) => {
 })
 openButton.addEventListener("click", modalToggle);
 closeButton.addEventListener("click", modalToggle);
+
+/*order alert*/
+function getOrderInputValue(){
+    lastone = Fname.value;
+    if(lastone != ""){
+        alert("მადლობა შეკვეთისთვის " + lastone)
+    }
+}
