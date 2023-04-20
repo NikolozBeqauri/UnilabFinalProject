@@ -93,7 +93,6 @@ header nav ul .header-nav-icons img{
 }
 .header-nav-links a{
     transition: 0.5s;
-    
 }
 .header-nav-links a:hover{
     color: var(--light-blue);
@@ -360,20 +359,20 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
 .services-nav-section ul{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #2193b0  , #6dd5ed);
     padding: 15px 0px;
     margin-bottom: 100px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-top: 10px;;
 }
 .services-nav-section ul a{
     text-decoration: none;
-    color: black;
+    color:  black;
     transition: 0.5s;
 }
 .services-nav-section ul a:hover{
    scale: 1.1;
-   color: var(--light-blue);
 }
 .technical-classification-section{
     margin-bottom: 100px;
@@ -421,6 +420,14 @@ footer .footer-card-wrapper address,footer .footer-card-wrapper div{
     color: var(--light-blue);
 }
 /*guarantee*/
+.guarantee-map{
+    margin-top: 60px;
+    width: 90%;
+    height: 80vh;
+}
+.guarantee-map iframe{
+    border-radius: 30px;
+}
 .guarantee-whole-wrapper h1{
     color: var(--light-blue);
     font-size: var(--title-font-size);
@@ -663,9 +670,6 @@ form .order-div-spans{
     display: flex;
     justify-content: space-between;
 }
-.order-submit input{
-    
-}
 @media (max-width: 1320px) {
     .main-page-cards{
         grid-template-columns: repeat(2, 1fr);
@@ -700,7 +704,8 @@ form .order-div-spans{
         display: grid;
         width: 100%;
         justify-content: center;
-        background-color: rgb(83, 82, 82);
+        text-align: center;
+        background-color: rgb(9, 53, 82);
         top: 85%;
         border-radius: 10px;
         z-index: 3;
@@ -804,6 +809,9 @@ form .order-div-spans{
     /*oeder*/
     .order-section form{
         justify-content: center;
+    }
+    .guarantee-map{
+        height: 50vh;
     }
 }
 @media (max-width: 480px) {
