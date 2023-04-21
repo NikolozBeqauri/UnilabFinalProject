@@ -845,6 +845,11 @@ form .order-div-spans{
         gap: 10px;
     }
 }
+@media (max-width: 350px) {
+    .model-cards-section{
+        padding: 10px 10px
+    }
+}
 @keyframes bounce{
     0%{
         transform: translateY(-150%);
